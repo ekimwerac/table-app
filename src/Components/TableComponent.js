@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import TableRow from './TableRow';
-import { fetchSellers, updateSeller } from '../Services/Api';
+import { fetchSellers, updateSeller } from '../services/Api';
 
 const TableComponent = () => {
   const [sellers, setSellers] = useState([]);
@@ -34,7 +34,11 @@ const TableComponent = () => {
         {/* ... table header ... */}
         <tbody>
           {sellers.map((seller) => (
-            <TableRow key={seller.id} seller={seller} updateSeller={handleUpdateSeller} />
+            <TableRow
+              key={seller.id}
+              seller={seller}
+              updateSeller={handleUpdateSeller}
+            />
           ))}
         </tbody>
       </table>

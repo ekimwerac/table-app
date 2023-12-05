@@ -4,9 +4,9 @@ import TableComponent from './Components/TableComponent';
 const App = () => {
   const [sellers, setSellers] = useState([
     {
-      firstName: 'Antonio',
-      surname: 'Guterez',
-      phone: '079955321',
+      firstName: '',
+      surname: '',
+      phone: '',
       id: 1,
     }
     // ... other sellers

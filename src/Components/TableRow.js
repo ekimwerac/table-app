@@ -1,3 +1,5 @@
+// components/TableComponent/TableRow.js
+
 import React, { useState } from 'react';
 import SellerForm from './SellerForm';
 
@@ -11,7 +13,13 @@ const TableRow = ({ seller, updateSeller }) => {
   return (
     <tr>
       {editMode ? (
-        <SellerForm seller={seller} updateSeller={updateSeller} toggleEditMode={handleToggleEditMode} />
+        <SellerForm
+          seller={seller}
+          updateSeller={(id, updatedData) => {
+            updateSeller(id, updatedData);
+            handleToggleEditMode(); // Toggle off edit mode after updating
+          }}
+        />
       ) : (
         <>
           <td>{seller.firstName}</td>
