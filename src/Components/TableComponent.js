@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import TableRow from './TableRow';
-import { fetchSellers, updateSeller } from '../../services/api';
+import { fetchSellers, updateSeller } from '../Services/Api';
 
 const TableComponent = () => {
   const [sellers, setSellers] = useState([]);
